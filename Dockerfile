@@ -13,7 +13,7 @@ RUN adduser --disabled-password --gecos "" ${USERNAME} && \
   chown ${USERNAME}:${USERNAME} ${ARTIFACTORY_HOME}
 
 WORKDIR ${ARTIFACTORY_HOME}
-COPY ../
+COPY . ./
 
 RUN npm install
 
